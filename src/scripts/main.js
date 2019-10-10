@@ -73,3 +73,42 @@ const architectKey = "architect"
 console.log(`The empire state building is at ${empireStateBuilding[addressKey]}. It was built in ${empireStateBuilding[constructionKey]},
 It is owned by ${empireStateBuilding[ownerKey]}, It cost ${empireStateBuilding[costKey]} to build
 and was designed by ${empireStateBuilding[architectKey]}. `)
+
+// Output names of part time instructors. 2 output only andy and zoe.
+
+const nashvilleSoftwareSchool = {
+    founded: 2012,
+    director: "John Wark",
+    instructors: {
+        fullTime: ["Jisie", "Brenda", "Steve", "Joe", "Andy"],
+        partTime: ["Zoe", "Nathan"]
+    },
+    address: "500 Interstate Blvd. S"
+}
+
+
+
+console.log(`These are the part time instructors ${nashvilleSoftwareSchool.instructors.partTime}, these are the full time instructors ${nashvilleSoftwareSchool.instructors.fullTime}.`);
+
+// Doing previous as a for loop
+const fullTimeInstructors =nashvilleSoftwareSchool.instructors.fullTime
+
+for(let i = 0; i < fullTimeInstructors.length; i++) {
+    console.log(fullTimeInstructors[i])
+}
+
+const partTimeInstructors =nashvilleSoftwareSchool.instructors.partTime
+
+for(let i = 0; i < partTimeInstructors.length; i++) {
+    console.log(partTimeInstructors[i])
+}
+
+console.log(`Male instructor ${nashvilleSoftwareSchool.instructors.fullTime[4]} Female Instructor ${nashvilleSoftwareSchool.instructors.partTime[0]};
+
+`)
+
+// how to do it with a for in statement loop
+
+for(let key in nashvilleSoftwareSchool.instructors) {
+    console.log(nashvilleSoftwareSchool.instructors[key])
+}
